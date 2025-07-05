@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg-gradient-512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc3545;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c82333;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="icon-gradient-512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow-512" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bg-gradient-512)" stroke="#ffffff" stroke-width="8"/>
+  
+  <!-- Inner Shadow Ring -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  
+  <!-- Alert Triangle -->
+  <g transform="translate(256, 256)" filter="url(#shadow-512)">
+    <path d="M -75 48 L 0 -64 L 75 48 Z" 
+          fill="url(#icon-gradient-512)" 
+          stroke="#dc3545" 
+          stroke-width="4"/>
+    
+    <!-- Exclamation Mark -->
+    <g fill="#dc3545" filter="url(#glow)">
+      <!-- Vertical Line -->
+      <rect x="-6" y="-32" width="12" height="48" rx="6"/>
+      <!-- Dot -->
+      <circle cx="0" cy="32" r="8"/>
+    </g>
+  </g>
+  
+  <!-- Pulse Animation Rings -->
+  <g opacity="0.6">
+    <circle cx="256" cy="256" r="248" fill="none" stroke="#dc3545" stroke-width="4">
+      <animate attributeName="r" values="248;256;248" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="256" cy="256" r="260" fill="none" stroke="#dc3545" stroke-width="2">
+      <animate attributeName="r" values="260;272;260" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="256" cy="256" r="276" fill="none" stroke="#dc3545" stroke-width="1">
+      <animate attributeName="r" values="276;288;276" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.05;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Highlight Ring -->
+  <circle cx="256" cy="256" r="240" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  
+  <!-- Accessibility -->
+  <title>DisasterAlert App Icon - Large</title>
+  <desc>512x512 emergency alert application icon featuring a warning triangle with exclamation mark, designed for PWA and high-resolution displays</desc>
+</svg>

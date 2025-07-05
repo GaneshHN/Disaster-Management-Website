@@ -1,0 +1,352 @@
+[
+  {
+    "id": "earthquake-safety",
+    "title": "Earthquake Safety",
+    "description": "Essential steps to protect yourself during and after an earthquake",
+    "icon": "fas fa-mountain",
+    "priority": "high",
+    "category": "natural-disasters",
+    "estimatedTime": "5-10 minutes",
+    "steps": [
+      {
+        "title": "Drop, Cover, and Hold On",
+        "description": "Immediately drop to your hands and knees, take cover under a sturdy desk or table, and hold on to it. If no table is available, cover your head and neck with your arms."
+      },
+      {
+        "title": "Stay Where You Are",
+        "description": "If indoors, stay indoors. If outdoors, stay outdoors. Do not run outside during shaking as most injuries occur when people try to move during an earthquake."
+      },
+      {
+        "title": "Avoid Dangerous Areas",
+        "description": "Stay away from windows, mirrors, hanging objects, tall furniture, and exterior walls that could fall or shatter."
+      },
+      {
+        "title": "If in a Vehicle",
+        "description": "Pull over safely, stop the vehicle, and stay inside. Avoid overpasses, bridges, and power lines. Once shaking stops, proceed cautiously."
+      },
+      {
+        "title": "After Shaking Stops",
+        "description": "Check for injuries and hazards. Be prepared for aftershocks. Turn on a battery-powered radio for emergency information."
+      },
+      {
+        "title": "Evacuate if Necessary",
+        "description": "If your building is damaged, evacuate carefully. Use stairs, not elevators. Watch for falling debris and broken glass."
+      }
+    ]
+  },
+  {
+    "id": "fire-emergency",
+    "title": "Fire Emergency",
+    "description": "Critical actions to take when facing a fire emergency",
+    "icon": "fas fa-fire-extinguisher",
+    "priority": "high",
+    "category": "fire-safety",
+    "estimatedTime": "2-5 minutes",
+    "steps": [
+      {
+        "title": "Alert Everyone",
+        "description": "Immediately alert all occupants by shouting 'Fire!' and activate the fire alarm if available."
+      },
+      {
+        "title": "Call Emergency Services",
+        "description": "Call 911 immediately. Provide your exact location, nature of emergency, and any people trapped."
+      },
+      {
+        "title": "Evacuate Immediately",
+        "description": "Leave the building immediately using the nearest safe exit. Do not use elevators. Stay low if there's smoke."
+      },
+      {
+        "title": "Check Doors Before Opening",
+        "description": "Feel doors with the back of your hand before opening. If hot, use an alternate route. If cool, open slowly and be ready to close quickly."
+      },
+      {
+        "title": "Stay Low in Smoke",
+        "description": "Crawl under smoke to the nearest exit. Smoke rises, so cleaner air is near the floor."
+      },
+      {
+        "title": "Meet at Assembly Point",
+        "description": "Once outside, go to the designated meeting point and stay there. Do not re-enter the building for any reason."
+      }
+    ]
+  },
+  {
+    "id": "flood-safety",
+    "title": "Flood Safety",
+    "description": "Protective measures for flood situations and water emergencies",
+    "icon": "fas fa-water",
+    "priority": "high",
+    "category": "natural-disasters",
+    "estimatedTime": "10-30 minutes",
+    "steps": [
+      {
+        "title": "Move to Higher Ground",
+        "description": "Immediately move to the highest floor of your building or to higher ground. Avoid basements and ground floors if flooding is imminent."
+      },
+      {
+        "title": "Avoid Walking in Water",
+        "description": "Never walk through flowing water. Six inches of moving water can knock you down. Use a stick to check depth if you must walk."
+      },
+      {
+        "title": "Don't Drive Through Floods",
+        "description": "Turn around and find an alternate route. Just 12 inches of rushing water can carry away a vehicle. Remember: 'Turn Around, Don't Drown.'"
+      },
+      {
+        "title": "Disconnect Utilities",
+        "description": "If time permits and it's safe, turn off utilities at main switches. Do not touch electrical equipment if you're wet or standing in water."
+      },
+      {
+        "title": "Gather Emergency Supplies",
+        "description": "Collect drinking water, non-perishable food, flashlight, battery-powered radio, first aid kit, and medications."
+      },
+      {
+        "title": "Listen for Updates",
+        "description": "Monitor local emergency broadcasts for evacuation orders and safety information. Follow all official instructions."
+      }
+    ]
+  },
+  {
+    "id": "severe-weather",
+    "title": "Severe Weather Safety",
+    "description": "Protection strategies for storms, tornadoes, and severe weather events",
+    "icon": "fas fa-cloud-rain",
+    "priority": "high",
+    "category": "weather",
+    "estimatedTime": "5-15 minutes",
+    "steps": [
+      {
+        "title": "Monitor Weather Alerts",
+        "description": "Stay informed through weather radio, TV, or mobile alerts. Understand the difference between watches and warnings."
+      },
+      {
+        "title": "Seek Appropriate Shelter",
+        "description": "For tornadoes: Go to the lowest floor, center of building, away from windows. For lightning: Stay indoors, avoid water and metal objects."
+      },
+      {
+        "title": "Avoid Windows and Doors",
+        "description": "Stay away from windows, skylights, and glass doors. Flying debris is the greatest danger in severe weather."
+      },
+      {
+        "title": "Have Emergency Kit Ready",
+        "description": "Keep emergency supplies accessible: water, food, flashlight, radio, batteries, first aid kit, and medications."
+      },
+      {
+        "title": "Stay Connected",
+        "description": "Keep mobile devices charged. Have backup power sources. Identify multiple ways to receive emergency information."
+      },
+      {
+        "title": "Wait for All Clear",
+        "description": "Don't venture outside until authorities confirm it's safe. Be aware of downed power lines, debris, and flooding."
+      }
+    ]
+  },
+  {
+    "id": "medical-emergency",
+    "title": "Medical Emergency Response",
+    "description": "First aid and emergency medical response procedures",
+    "icon": "fas fa-heartbeat",
+    "priority": "high",
+    "category": "medical",
+    "estimatedTime": "immediate",
+    "steps": [
+      {
+        "title": "Assess the Situation",
+        "description": "Check for responsiveness. Tap shoulders and shout 'Are you okay?' Look for signs of breathing and consciousness."
+      },
+      {
+        "title": "Call for Help",
+        "description": "Call 911 immediately. Provide clear location, nature of emergency, number of victims, and your contact information."
+      },
+      {
+        "title": "Check ABCs",
+        "description": "Airway: Ensure airway is clear. Breathing: Look, listen, feel for breathing. Circulation: Check for pulse and severe bleeding."
+      },
+      {
+        "title": "Control Bleeding",
+        "description": "Apply direct pressure to wounds with clean cloth. Elevate injured area above heart level if possible. Don't remove embedded objects."
+      },
+      {
+        "title": "Monitor Vital Signs",
+        "description": "Keep checking breathing and pulse. Be prepared to perform CPR if trained. Keep victim warm and comfortable."
+      },
+      {
+        "title": "Provide Information to EMS",
+        "description": "When emergency services arrive, provide all relevant information about the incident and any care you've provided."
+      }
+    ]
+  },
+  {
+    "id": "power-outage",
+    "title": "Power Outage Preparedness",
+    "description": "Steps to stay safe and comfortable during extended power outages",
+    "icon": "fas fa-bolt",
+    "priority": "medium",
+    "category": "utilities",
+    "estimatedTime": "30-60 minutes",
+    "steps": [
+      {
+        "title": "Check Circuit Breakers",
+        "description": "First, check if the outage is just in your home by checking circuit breakers and fuses. Look outside to see if neighbors have power."
+      },
+      {
+        "title": "Report the Outage",
+        "description": "Contact your utility company to report the outage. Use their mobile app or website if available, or call their emergency number."
+      },
+      {
+        "title": "Use Flashlights Only",
+        "description": "Never use candles, gas lanterns, or camp stoves indoors. Use battery-powered flashlights and lanterns for lighting."
+      },
+      {
+        "title": "Preserve Food Safety",
+        "description": "Keep refrigerator and freezer doors closed. Food will stay cold for 4 hours in refrigerator, 24-48 hours in full freezer."
+      },
+      {
+        "title": "Stay Warm or Cool",
+        "description": "Dress in layers for warmth. Close off unneeded rooms. Never use generators, grills, or camp stoves indoors due to carbon monoxide risk."
+      },
+      {
+        "title": "Conserve Phone Battery",
+        "description": "Use phones sparingly to preserve battery. Turn on low power mode. Have backup power sources like power banks charged."
+      }
+    ]
+  },
+  {
+    "id": "home-security",
+    "title": "Home Security Emergency",
+    "description": "Actions to take when home security is compromised",
+    "icon": "fas fa-shield-alt",
+    "priority": "high",
+    "category": "security",
+    "estimatedTime": "immediate",
+    "steps": [
+      {
+        "title": "Ensure Personal Safety",
+        "description": "If you suspect an intruder, do not confront them. Hide in a secure room with a locked door, or leave the premises immediately if safe to do so."
+      },
+      {
+        "title": "Call Emergency Services",
+        "description": "Call 911 immediately. Speak quietly if hiding. Provide your address, situation details, and stay on the line as instructed."
+      },
+      {
+        "title": "Secure Yourself",
+        "description": "If hiding, lock the door, turn off lights, silence your phone, and stay away from windows. Have an escape route planned."
+      },
+      {
+        "title": "Don't Investigate",
+        "description": "Never go to investigate suspicious sounds or check on the source of alarm activation. Wait for law enforcement to arrive."
+      },
+      {
+        "title": "Identify Yourself to Police",
+        "description": "When police arrive, clearly identify yourself. Keep hands visible. Follow all instructions carefully."
+      },
+      {
+        "title": "Document and Report",
+        "description": "After the situation is resolved, document any damage or theft. File a police report and contact your insurance company."
+      }
+    ]
+  },
+  {
+    "id": "chemical-spill",
+    "title": "Chemical Spill Response",
+    "description": "Safety procedures for hazardous chemical exposure or spills",
+    "icon": "fas fa-biohazard",
+    "priority": "high",
+    "category": "hazmat",
+    "estimatedTime": "immediate",
+    "steps": [
+      {
+        "title": "Evacuate the Area",
+        "description": "Immediately leave the area of the spill. Move upwind and uphill if outdoors. Alert others to evacuate as well."
+      },
+      {
+        "title": "Call Emergency Services",
+        "description": "Call 911 and report the chemical spill. Provide the chemical name if known, location, and extent of contamination."
+      },
+      {
+        "title": "Remove Contaminated Clothing",
+        "description": "If chemicals contacted your clothing or skin, remove clothing immediately and rinse affected areas with water for 15-20 minutes."
+      },
+      {
+        "title": "Avoid Contact",
+        "description": "Do not touch spilled chemicals. Avoid walking through contaminated areas. Keep others away from the spill zone."
+      },
+      {
+        "title": "Seek Medical Attention",
+        "description": "If exposed to chemicals, seek immediate medical attention even if you feel fine. Bring the Safety Data Sheet if available."
+      },
+      {
+        "title": "Follow Decontamination",
+        "description": "Follow instructions from emergency responders for decontamination procedures. Do not re-enter the area until cleared by authorities."
+      }
+    ]
+  },
+  {
+    "id": "gas-leak",
+    "title": "Gas Leak Emergency",
+    "description": "Critical safety steps for natural gas or propane leaks",
+    "icon": "fas fa-gas-pump",
+    "priority": "high",
+    "category": "utilities",
+    "estimatedTime": "immediate",
+    "steps": [
+      {
+        "title": "Don't Ignite Anything",
+        "description": "Do not light matches, lighters, candles, or cigarettes. Do not turn electrical switches on or off, including light switches."
+      },
+      {
+        "title": "Evacuate Immediately",
+        "description": "Leave the area immediately. Do not use phones or electrical devices inside the building. Get to fresh air."
+      },
+      {
+        "title": "Shut Off Gas if Safe",
+        "description": "If you can safely reach the gas meter outside, turn off the main gas valve. Use a wrench to turn the valve a quarter turn."
+      },
+      {
+        "title": "Call From Safe Distance",
+        "description": "Once you're at a safe distance, call 911 and your gas company. Do not re-enter until authorities say it's safe."
+      },
+      {
+        "title": "Open Windows and Doors",
+        "description": "If safely possible before evacuating, open windows and doors to ventilate the area and help disperse the gas."
+      },
+      {
+        "title": "Stay Away",
+        "description": "Do not return to the building until emergency responders and gas company personnel declare it safe."
+      }
+    ]
+  },
+  {
+    "id": "winter-storm",
+    "title": "Winter Storm Preparedness",
+    "description": "Essential preparation for blizzards and severe winter weather",
+    "icon": "fas fa-snowflake",
+    "priority": "medium",
+    "category": "weather",
+    "estimatedTime": "2-4 hours",
+    "steps": [
+      {
+        "title": "Stock Emergency Supplies",
+        "description": "Gather water (1 gallon per person per day for 3 days), non-perishable food, medications, flashlights, batteries, and first aid kit."
+      },
+      {
+        "title": "Prepare Heating Sources",
+        "description": "Check heating system, stock up on fuel if using wood/coal. Have extra blankets available. Never use generators or grills indoors."
+      },
+      {
+        "title": "Protect Pipes",
+        "description": "Insulate pipes, disconnect garden hoses, and know how to shut off water. Let faucets drip slightly to prevent freezing."
+      },
+      {
+        "title": "Prepare Vehicles",
+        "description": "Fill gas tanks, check antifreeze, battery, and tires. Keep emergency kit in car: blankets, food, water, tools, and medications."
+      },
+      {
+        "title": "Stay Informed",
+        "description": "Monitor weather forecasts and warnings. Have battery-powered or hand-crank radio for updates if power goes out."
+      },
+      {
+        "title": "Avoid Travel",
+        "description": "Stay indoors during storms. If you must drive, inform someone of your route and expected arrival time. Keep car kit stocked."
+      }
+    ]
+  }
+]

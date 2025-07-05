@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DisasterAlert - Real-time disaster tracking and emergency response system">
+    <meta name="theme-color" content="#dc3545">
+    <title>DisasterAlert - Stay Informed. Stay Safe.</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/icon-192.svg">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading DisasterAlert...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    <h1>DisasterAlert</h1>
+                </div>
+                <nav class="nav" role="navigation">
+                    <button class="nav-toggle" aria-label="Toggle navigation menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#map" class="nav-link">Live Map</a></li>
+                        <li><a href="#emergency" class="nav-link">Emergency</a></li>
+                        <li><a href="#history" class="nav-link">History</a></li>
+                        <li><a href="#guides" class="nav-link">Safety Guides</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="notification-toggle" aria-label="Toggle notifications">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Stay Informed. Stay Safe.</h2>
+                    <p class="hero-subtitle">Real-time disaster alerts and emergency response at your fingertips</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="active-alerts">0</span>
+                            <span class="stat-label">Active Alerts</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-events">0</span>
+                            <span class="stat-label">Total Events</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="last-updated">--</span>
+                            <span class="stat-label">Last Updated</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="scrollToSection('map')">
+                            <i class="fas fa-map-marked-alt"></i>
+                            View Live Map
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('emergency')">
+                            <i class="fas fa-life-ring"></i>
+                            Emergency Help
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Disaster Map -->
+        <section id="map" class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Live Disaster Map</h2>
+                    <p class="section-subtitle">Real-time tracking of disasters worldwide</p>
+                </div>
+                <div class="map-container">
+                    <div class="map-controls">
+                        <div class="filter-group">
+                            <label for="disaster-filter">Filter by type:</label>
+                            <select id="disaster-filter" class="filter-select">
+                                <option value="all">All Disasters</option>
+                                <option value="earthquakes">Earthquakes</option>
+                                <option value="volcanoes">Volcanoes</option>
+                                <option value="floods">Floods</option>
+                                <option value="storms">Storms</option>
+                                <option value="wildfires">Wildfires</option>
+                                <option value="severeStorms">Severe Storms</option>
+                            </select>
+                        </div>
+                        <div class="map-actions">
+                            <button class="btn btn-sm btn-outline" id="refresh-map">
+                                <i class="fas fa-sync-alt"></i>
+                                Refresh
+                            </button>
+                            <button class="btn btn-sm btn-outline" id="locate-user">
+                                <i class="fas fa-crosshairs"></i>
+                                My Location
+                            </button>
+                        </div>
+                    </div>
+                    <div id="disaster-map" class="map-widget" role="img" aria-label="Interactive disaster map"></div>
+                    <div class="map-legend">
+                        <h4>Legend</h4>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <span class="legend-marker earthquake"></span>
+                                <span>Earthquakes</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker volcano"></span>
+                                <span>Volcanoes</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker flood"></span>
+                                <span>Floods</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker storm"></span>
+                                <span>Storms</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker wildfire"></span>
+                                <span>Wildfires</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency SOS Section -->
+        <section id="emergency" class="emergency-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Emergency Response</h2>
+                    <p class="section-subtitle">Quick access to emergency services and safety resources</p>
+                </div>
+                <div class="emergency-content">
+                    <div class="sos-container">
+                        <div class="sos-status" id="sos-status">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Ready for Emergency</span>
+                        </div>
+                        <button class="sos-button" id="sos-button" aria-label="Emergency SOS button">
+                            <div class="sos-pulse"></div>
+                            <i class="fas fa-exclamation"></i>
+                            <span>SOS</span>
+                        </button>
+                        <p class="sos-instructions">
+                            Press and hold for 3 seconds to send emergency alert
+                        </p>
+                    </div>
+                    
+                    <div class="emergency-contacts">
+                        <h3>Emergency Contacts</h3>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <i class="fas fa-ambulance"></i>
+                                <div class="contact-info">
+                                    <h4>Emergency Services</h4>
+                                    <a href="tel:108" class="contact-link">108</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-fire-extinguisher"></i>
+                                <div class="contact-info">
+                                    <h4>Fire Department</h4>
+                                    <a href="tel:101" class="contact-link">101</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div class="contact-info">
+                                    <h4>Police</h4>
+                                    <a href="tel:100" class="contact-link">100</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-hospital"></i>
+                                <div class="contact-info">
+                                    <h4>Poison Control</h4>
+                                    <a href="tel:1-800-222-1222" class="contact-link">1-800-222-1222</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Guides Section -->
+        <section id="guides" class="guides-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Safety Guides</h2>
+                    <p class="section-subtitle">Essential emergency preparedness and response guides</p>
+                </div>
+                <div class="guides-grid" id="guides-grid">
+                    <!-- Safety guides will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Disaster History Section -->
+        <section id="history" class="history-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Disasters</h2>
+                    <p class="section-subtitle">Historical data and analysis of recent events</p>
+                </div>
+                <div class="history-controls">
+                    <div class="search-container">
+                        <input type="text" id="history-search" placeholder="Search disasters..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="filter-container">
+                        <select id="history-filter" class="filter-select">
+                            <option value="all">All Types</option>
+                            <option value="earthquakes">Earthquakes</option>
+                            <option value="volcanoes">Volcanoes</option>
+                            <option value="floods">Floods</option>
+                            <option value="storms">Storms</option>
+                            <option value="wildfires">Wildfires</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="history-content">
+                    <div class="disaster-list" id="disaster-list">
+                        <!-- Disaster items will be populated by JavaScript -->
+                    </div>
+                    <div class="load-more-container">
+                        <button class="btn btn-outline" id="load-more-btn">
+                            <i class="fas fa-plus"></i>
+                            Load More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DisasterAlert</h3>
+                    <p>Providing real-time disaster information and emergency response resources to keep communities safe.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#map">Live Map</a></li>
+                        <li><a href="#emergency">Emergency Help</a></li>
+                        <li><a href="#guides">Safety Guides</a></li>
+                        <li><a href="#history">Disaster History</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul>
+                        <li><a href="https://eonet.sci.gsfc.nasa.gov/" target="_blank">NASA EONET</a></li>
+                        <li><a href="https://earthquake.usgs.gov/" target="_blank">USGS Earthquakes</a></li>
+                        <li><a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DisasterAlert. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Emergency Guide Details -->
+    <div id="guide-modal" class="modal" role="dialog" aria-labelledby="guide-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="guide-modal-title"></h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="guide-modal-body">
+                <!-- Guide content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/sos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

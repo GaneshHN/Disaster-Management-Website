@@ -1,0 +1,626 @@
+/* Responsive Design */
+
+/* Large Screens (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-5xl);
+  }
+  
+  .hero-stats {
+    gap: var(--spacing-3xl);
+  }
+  
+  .guides-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .emergency-content {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+/* Medium Screens (768px to 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .emergency-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  .sos-button {
+    width: 180px;
+    height: 180px;
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Small Screens (576px to 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  /* Header */
+  .header-content {
+    height: 60px;
+  }
+  
+  .logo h1 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: var(--spacing-md);
+    transform: translateY(-100%);
+    transition: transform var(--transition-base);
+    z-index: 999;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .nav-menu.active {
+    transform: translateY(0);
+  }
+  
+  .nav-link {
+    padding: var(--spacing-md);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  /* Main Content */
+  .main {
+    margin-top: 60px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Sections */
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .section-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  /* Map Section */
+  .map-controls {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .map-widget {
+    height: 400px;
+  }
+  
+  .legend-items {
+    justify-content: center;
+  }
+  
+  /* Emergency Section */
+  .emergency-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .sos-button {
+    width: 160px;
+    height: 160px;
+    font-size: var(--font-size-lg);
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Guides Section */
+  .guides-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* History Section */
+  .history-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-container {
+    max-width: none;
+  }
+  
+  /* Modal */
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+    margin: var(--spacing-md);
+  }
+  
+  .modal-header {
+    padding: var(--spacing-md);
+  }
+  
+  .modal-body {
+    padding: var(--spacing-md);
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Disaster Cards */
+  .disaster-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .disaster-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .disaster-actions {
+    flex-direction: column;
+  }
+  
+  /* Guide Cards */
+  .guide-actions {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  /* Emergency Steps */
+  .emergency-step {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .step-number {
+    align-self: center;
+  }
+  
+  /* Buttons */
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  /* Notification */
+  .notification {
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    max-width: none;
+  }
+  
+  /* Alert Banner */
+  .alert-banner-content {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    height: 6px;
+  }
+  
+  /* Tab Navigation */
+  .tab-nav {
+    flex-direction: column;
+  }
+  
+  .tab-btn {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-right: none;
+  }
+  
+  .tab-btn:last-child {
+    border-bottom: none;
+  }
+  
+  .tab-btn.active {
+    border-bottom: 1px solid var(--primary-color);
+    border-right: none;
+  }
+}
+
+/* Extra Small Screens (575px and below) */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+  
+  /* Typography */
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  /* Spacing */
+  .hero {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  /* SOS Button */
+  .sos-button {
+    width: 140px;
+    height: 140px;
+    font-size: var(--font-size-base);
+  }
+  
+  /* Map */
+  .map-widget {
+    height: 300px;
+  }
+  
+  /* Cards */
+  .guide-card,
+  .disaster-card {
+    padding: var(--spacing-md);
+  }
+  
+  /* Contact Grid */
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .contact-item i {
+    font-size: var(--font-size-xl);
+  }
+  
+  /* Footer */
+  .footer {
+    padding: var(--spacing-2xl) 0 var(--spacing-md);
+  }
+  
+  /* Modal */
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+  
+  /* Form Elements */
+  .filter-select,
+  .search-input {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-md);
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-base);
+  }
+  
+  .btn-sm {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+  
+  /* Header Actions */
+  .header-actions {
+    gap: var(--spacing-xs);
+  }
+  
+  .theme-toggle,
+  .notification-toggle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  /* Stats */
+  .stat-number {
+    font-size: var(--font-size-2xl);
+  }
+  
+  /* Legend */
+  .legend-items {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero-stats {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+  
+  .hero-actions {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+  
+  .hero-actions .btn {
+    width: auto;
+  }
+  
+  .map-widget {
+    height: 350px;
+  }
+  
+  .emergency-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .guides-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .sos-button {
+    box-shadow: 0 8px 25px rgba(255, 68, 68, 0.4);
+  }
+  
+  .guide-card,
+  .disaster-card {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .sos-pulse {
+    animation: none;
+  }
+  
+  .loading-spinner {
+    animation: none;
+  }
+  
+  .hero::before {
+    animation: none;
+  }
+  
+  .fade-in,
+  .slide-in-left,
+  .slide-in-right {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .footer,
+  .sos-button,
+  .modal,
+  .notification,
+  .alert-banner,
+  .nav-toggle,
+  .theme-toggle,
+  .notification-toggle {
+    display: none !important;
+  }
+  
+  .main {
+    margin-top: 0;
+  }
+  
+  .hero {
+    background: none;
+    color: var(--text-primary);
+  }
+  
+  .disaster-card,
+  .guide-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+  }
+  
+  .map-widget {
+    height: 400px;
+    border: 1px solid var(--border-color);
+  }
+  
+  a {
+    color: var(--text-primary);
+    text-decoration: underline;
+  }
+  
+  .btn {
+    background: none;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .guide-card,
+  .disaster-card,
+  .contact-item {
+    min-height: 44px;
+  }
+  
+  .theme-toggle,
+  .notification-toggle,
+  .modal-close {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .sos-button {
+    min-width: 160px;
+    min-height: 160px;
+  }
+  
+  .filter-select,
+  .search-input {
+    min-height: 44px;
+  }
+  
+  .tab-btn {
+    min-height: 44px;
+  }
+}
+
+/* Dark Theme Responsive Adjustments */
+@media (max-width: 767px) {
+  [data-theme="dark"] .nav-menu {
+    background-color: var(--bg-primary);
+    border-top-color: var(--border-color);
+  }
+  
+  [data-theme="dark"] .modal-content {
+    background-color: var(--bg-primary);
+  }
+  
+  [data-theme="dark"] .notification {
+    background-color: var(--bg-primary);
+    border-color: var(--border-color);
+  }
+}
+
+/* Accessibility Improvements for Small Screens */
+@media (max-width: 767px) {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10000;
+  }
+  
+  .skip-link:focus {
+    top: 6px;
+  }
+  
+  /* Ensure focus is visible on touch devices */
+  .btn:focus,
+  .nav-link:focus,
+  .filter-select:focus,
+  .search-input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Improve contrast for small text */
+  .stat-label,
+  .guide-steps-count,
+  .disaster-meta {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+}

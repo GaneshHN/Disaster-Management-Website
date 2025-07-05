@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc3545;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c82333;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="96" cy="96" r="88" fill="url(#bg-gradient)" stroke="#ffffff" stroke-width="4"/>
+  
+  <!-- Alert Triangle -->
+  <g transform="translate(96, 96)" filter="url(#shadow)">
+    <path d="M -28 18 L 0 -24 L 28 18 Z" 
+          fill="url(#icon-gradient)" 
+          stroke="#dc3545" 
+          stroke-width="2"/>
+    
+    <!-- Exclamation Mark -->
+    <g fill="#dc3545">
+      <!-- Vertical Line -->
+      <rect x="-2" y="-12" width="4" height="18" rx="2"/>
+      <!-- Dot -->
+      <circle cx="0" cy="12" r="3"/>
+    </g>
+  </g>
+  
+  <!-- Pulse Animation Rings -->
+  <g opacity="0.6">
+    <circle cx="96" cy="96" r="92" fill="none" stroke="#dc3545" stroke-width="2">
+      <animate attributeName="r" values="92;96;92" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="96" cy="96" r="98" fill="none" stroke="#dc3545" stroke-width="1">
+      <animate attributeName="r" values="98;104;98" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Accessibility -->
+  <title>DisasterAlert App Icon</title>
+  <desc>Emergency alert application icon featuring a warning triangle with exclamation mark</desc>
+</svg>

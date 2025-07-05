@@ -1,0 +1,151 @@
+{
+  "name": "DisasterAlert",
+  "short_name": "DisasterAlert",
+  "description": "Real-time disaster tracking and emergency response system",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#dc3545",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ],
+  
+  "categories": [
+    "news",
+    "utilities",
+    "weather",
+    "emergency"
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/desktop.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Desktop view of DisasterAlert"
+    },
+    {
+      "src": "/assets/screenshots/mobile.jpg",
+      "sizes": "390x844",
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "Mobile view of DisasterAlert"
+    }
+  ],
+  
+  "shortcuts": [
+    {
+      "name": "Emergency SOS",
+      "short_name": "SOS",
+      "description": "Quick access to emergency SOS feature",
+      "url": "/?action=sos",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-192.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Live Map",
+      "short_name": "Map",
+      "description": "View live disaster map",
+      "url": "/?action=map",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-192.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Safety Guides",
+      "short_name": "Guides",
+      "description": "Access emergency safety guides",
+      "url": "/?action=guides",
+      "icons": [
+        {
+          "src": "/assets/icons/icon-192.svg",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  
+  "permissions": [
+    "geolocation",
+    "notifications",
+    "background-sync",
+    "storage"
+  ],
+  
+  "features": [
+    "Cross Platform",
+    "Background Sync",
+    "Offline Support",
+    "Push Notifications",
+    "Geolocation",
+    "Responsive Design"
+  ],
+  
+  "prefer_related_applications": false,
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "launch_handler": {
+    "client_mode": "navigate-new"
+  },
+  
+  "handle_links": "preferred",
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+disaster",
+      "url": "/?disaster=%s"
+    }
+  ],
+  
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "application/json": [".json"]
+      }
+    }
+  ],
+  
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
