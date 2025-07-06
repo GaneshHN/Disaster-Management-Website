@@ -223,15 +223,183 @@
         </section>
 
         <!-- Safety Guides Section -->
-        <section id="guides" class="guides-section">
+       <section id="guides" class="guides-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Safety Guides</h2>
                     <p class="section-subtitle">Essential emergency preparedness and response guides</p>
                 </div>
                 <div class="guides-grid" id="guides-grid">
-                    <!-- Safety guides will be populated by JavaScript -->
-                </div>
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('earthquake-safety')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-mountain"></i>
+          </div>
+          <h3>Earthquake Safety</h3>
+        </div>
+        <p>Essential steps to protect yourself during and after an earthquake</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('fire-emergency')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-fire-extinguisher"></i>
+          </div>
+          <h3>Fire Emergency</h3>
+        </div>
+        <p>Critical actions to take when facing a fire emergency</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('flood-safety')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-water"></i>
+          </div>
+          <h3>Flood Safety</h3>
+        </div>
+        <p>Protective measures for flood situations and water emergencies</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('severe-weather')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+          <h3>Severe Weather Safety</h3>
+        </div>
+        <p>Protection strategies for storms, tornadoes, and severe weather events</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('medical-emergency')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>Medical Emergency Response</h3>
+        </div>
+        <p>First aid and emergency medical response procedures</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('power-outage')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Power Outage Preparedness</h3>
+        </div>
+        <p>Steps to stay safe and comfortable during extended power outages</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority medium">medium</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('home-security')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Home Security Emergency</h3>
+        </div>
+        <p>Actions to take when home security is compromised</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('chemical-spill')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-biohazard"></i>
+          </div>
+          <h3>Chemical Spill Response</h3>
+        </div>
+        <p>Safety procedures for hazardous chemical exposure or spills</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('gas-leak')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-gas-pump"></i>
+          </div>
+          <h3>Gas Leak Emergency</h3>
+        </div>
+        <p>Critical safety steps for natural gas or propane leaks</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority high">high</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    
+      <div class="guide-card fade-in visible" onclick="app.showGuideModal('winter-storm')">
+        <div class="guide-card-header">
+          <div class="guide-icon">
+            <i class="fas fa-snowflake"></i>
+          </div>
+          <h3>Winter Storm Preparedness</h3>
+        </div>
+        <p>Essential preparation for blizzards and severe winter weather</p>
+        <div class="guide-steps">
+          <span class="guide-steps-count">6 steps</span>
+        </div>
+        <div class="guide-actions">
+          <span class="guide-priority medium">medium</span>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
             </div>
         </section>
 
