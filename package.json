@@ -1,8 +1,11 @@
 {
-  "name": "flex-template",
+  "name": "@GaneshHN/flex-template",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "npm-run-all --parallel dev:frontend dev:backend",
     "dev:frontend": "vite --open",
@@ -38,12 +41,5 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
-  }
-}
-{
-  "name": "@your-github-username/your-project-name",
-  "version": "1.0.0",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
