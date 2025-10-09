@@ -40,3 +40,10 @@
     "vite": "^6.2.0"
   }
 }
+{
+  "name": "@your-github-username/your-project-name",
+  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
